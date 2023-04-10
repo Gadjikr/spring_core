@@ -1,0 +1,31 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="firstSpringProg:war exploded">
+    <output-path>$PROJECT_DIR$/firstSpringProg/target/firstSpringProg</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>firstSpringProg</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="firstSpringProg" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:6.0.6" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:6.0.6" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:6.0.6" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:6.0.6" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:6.0.6" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:6.0.6" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/firstSpringProg/target/firstSpringProg/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="firstSpringProg/web/Web" />
+    </root>
+  </artifact>
+</component>
