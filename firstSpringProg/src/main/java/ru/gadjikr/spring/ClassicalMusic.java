@@ -1,11 +1,13 @@
 package ru.gadjikr.spring;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Component("musicClassicBean")
+@Scope("prototype")
 public class ClassicalMusic implements Music {
     String song1 = "Classical song 1";
     String song2 = "Classical song 2";

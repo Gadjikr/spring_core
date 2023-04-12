@@ -9,7 +9,7 @@
 
     <context:component-scan base-package="ru.gadjikr.spring"/>
 
-<!--    <context:property-placeholder location="classpath:musicPlayer.properties"/>-->
+    <context:property-placeholder location="classpath:musicPlayer.properties"/>
 
 
 <!--    <bean id="musicRapBean"-->
