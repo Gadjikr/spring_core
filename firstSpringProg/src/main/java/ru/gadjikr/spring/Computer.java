@@ -2,6 +2,7 @@ package ru.gadjikr.spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import ru.gadjikr.spring.music_types.MusicOption;
 
 @Component
 public class Computer {

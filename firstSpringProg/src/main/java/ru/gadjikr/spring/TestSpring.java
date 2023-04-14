@@ -1,6 +1,9 @@
 package ru.gadjikr.spring;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import ru.gadjikr.spring.music_types.ClassicalMusic;
+import ru.gadjikr.spring.music_types.MusicOption;
+import ru.gadjikr.spring.music_types.RapMusic;
 
 public class TestSpring {
     public static void main(String[] args) {

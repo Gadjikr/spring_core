@@ -13,12 +13,12 @@
 
 
 <!--    <bean id="musicRapBean"-->
-<!--          class="ru.gadjikr.spring.RapMusic"-->
+<!--          class="ru.gadjikr.spring.music_types.RapMusic"-->
 <!--          init-method="rapInit"-->
 <!--          destroy-method="rapDestroy">-->
 <!--    </bean>-->
 <!--    <bean id="musicClassicBean"-->
-<!--          class="ru.gadjikr.spring.ClassicalMusic"-->
+<!--          class="ru.gadjikr.spring.music_types.ClassicalMusic"-->
 <!--          factory-method="fabricClassicalMusic">-->
 
 <!--    </bean>-->

@@ -1,6 +1,7 @@
-package ru.gadjikr.spring;
+package ru.gadjikr.spring.music_types;
 
 import org.springframework.stereotype.Component;
+import ru.gadjikr.spring.Music;
 
 import java.util.ArrayList;
 import java.util.List;

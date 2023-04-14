@@ -1,7 +1,8 @@
-package ru.gadjikr.spring;
+package ru.gadjikr.spring.music_types;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+import ru.gadjikr.spring.Music;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -9,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component("musicRapBean")
-public class RapMusic implements Music{
+public class RapMusic implements Music {
     String song1 = "Rap song 1";
     String song2 = "Rap song 2";
     String song3 = "Rap song 3";
