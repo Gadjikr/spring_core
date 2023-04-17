@@ -7,12 +7,12 @@ import ru.gadjikr.spring.Music;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component("musicClassicBean")
-@Scope("prototype")
+//@Component("musicClassicBean")
+//@Scope("prototype")
 public class ClassicalMusic implements Music {
-    String song1 = "Classical song 1";
-    String song2 = "Classical song 2";
-    String song3 = "Classical song 3";
+    private String song1 = "Classical song 1";
+    private String song2 = "Classical song 2";
+    private String song3 = "Classical song 3";
 
     List<String> classicalList = new ArrayList<>(3);
 

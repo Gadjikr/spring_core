@@ -1,7 +1,49 @@
 package ru.gadjikr.spring.config;
 
-import org.springframework.context.annotation.Configuration;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.*;
+import ru.gadjikr.spring.Computer;
+import ru.gadjikr.spring.MusicPlayer;
+import ru.gadjikr.spring.music_types.*;
 
-//@Configuration
+@Configuration
+//@ComponentScan("ru.gadjikr.spring")
+@PropertySource("classpath:musicPlayer.properties")
 public class SpringConfig {
+    @Bean
+    @Scope("prototype")
+    ClassicalMusic musicClassicBean() {
+        return new ClassicalMusic();
+    }
+
+    @Bean
+    RockMusic musicRockBean() {
+        return new RockMusic();
+    }
+
+    @Bean
+    JazzMusic musicJazzBean() {
+        return new JazzMusic();
+    }
+
+    @Bean
+    RapMusic musicRapBean() {
+        return new RapMusic();
+    }
+
+    @Bean
+    AllMusic musicAllBean() {
+        return new AllMusic(musicRockBean(), musicRapBean(), musicClassicBean(), musicJazzBean());
+    }
+
+    @Bean
+    MusicPlayer musicPlayer() {
+        return new MusicPlayer(musicRockBean(), musicRapBean(), musicClassicBean(), musicJazzBean(), musicAllBean());
+    }
+
+    @Bean
+    Computer computer() {
+        return new Computer(musicPlayer());
+    }
+
 }

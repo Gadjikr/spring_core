@@ -6,7 +6,7 @@ import ru.gadjikr.spring.Music;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component("musicRockBean")
+//@Component("musicRockBean")
 public class RockMusic implements Music {
     String song1 = "Rock song 1";
     String song2 = "Rock song 2";

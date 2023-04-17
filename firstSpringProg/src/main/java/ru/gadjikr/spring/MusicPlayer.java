@@ -9,7 +9,7 @@ import ru.gadjikr.spring.music_types.MusicOption;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+//@Component
 public class MusicPlayer {
 
     @Value("${musicPlayer.name}")
@@ -31,12 +31,21 @@ public class MusicPlayer {
     private Music rock;
     private Music rap;
     private Music classical;
+    private Music jazz;
+    private Music all;
 
-    @Autowired
-    public MusicPlayer(@Qualifier("musicRockBean") Music rock, @Qualifier("musicRapBean") Music rap, @Qualifier("musicClassicBean") Music classical) {
+    //    @Autowired
+    public MusicPlayer(
+            @Qualifier("musicRockBean") Music rock,
+            @Qualifier("musicRapBean") Music rap,
+            @Qualifier("musicClassicBean") Music classical,
+            @Qualifier("musicJazzBean") Music jazz,
+            @Qualifier("musicAllBean") Music all) {
         this.rock = rock;
         this.rap = rap;
         this.classical = classical;
+        this.jazz = jazz;
+        this.all = all;
     }
 
 
@@ -48,7 +57,11 @@ public class MusicPlayer {
 
             case RAP -> music = rap;
 
-            default -> music = classical;
+            case CLASSICAL -> music = classical;
+
+            case JAZZ -> music = jazz;
+
+            default -> music = all;
         }
 
         musicList = music.getMusicList();
