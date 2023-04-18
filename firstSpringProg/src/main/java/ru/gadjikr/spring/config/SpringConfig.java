@@ -37,8 +37,13 @@ public class SpringConfig {
     }
 
     @Bean
+    AllAlbums allAlbums(){
+        return new AllAlbums(musicRockBean(), musicRapBean(), musicClassicBean(), musicJazzBean(), musicAllBean());
+    };
+
+    @Bean
     MusicPlayer musicPlayer() {
-        return new MusicPlayer(musicRockBean(), musicRapBean(), musicClassicBean(), musicJazzBean(), musicAllBean());
+        return new MusicPlayer(allAlbums());
     }
 
     @Bean

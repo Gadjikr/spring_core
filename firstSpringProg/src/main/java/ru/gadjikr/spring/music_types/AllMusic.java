@@ -29,13 +29,7 @@ public class AllMusic implements Music {
         allMusic.addAll(musicClassicBean.getMusicList());
         allMusic.addAll(musicJazzBean.getMusicList());
 
-        allGenres.put("Rock",musicRockBean.getMusicList());
-        allGenres.put("Rap",musicRapBean.getMusicList());
-        allGenres.put("Classic",musicClassicBean.getMusicList());
-        allGenres.put("Jazz",musicJazzBean.getMusicList());
 
-        System.out.println("--------"+allGenres.entrySet()+"---------");
-        System.out.println("Number of all songs - " + allMusic.size());
     }
 
 

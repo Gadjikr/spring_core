@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import ru.gadjikr.spring.music_types.AllAlbums;
 import ru.gadjikr.spring.music_types.MusicOption;
 
 import java.util.ArrayList;
@@ -34,23 +35,17 @@ public class MusicPlayer {
     private Music jazz;
     private Music all;
 
-    //    @Autowired
-    public MusicPlayer(
-            @Qualifier("musicRockBean") Music rock,
-            @Qualifier("musicRapBean") Music rap,
-            @Qualifier("musicClassicBean") Music classical,
-            @Qualifier("musicJazzBean") Music jazz,
-            @Qualifier("musicAllBean") Music all) {
-        this.rock = rock;
-        this.rap = rap;
-        this.classical = classical;
-        this.jazz = jazz;
-        this.all = all;
+    public MusicPlayer(AllAlbums albums) {
+        this.rock = albums.RockAlbum;
+        this.rap = albums.RapAlbum;
+        this.classical = albums.ClassicAlbum;
+        this.jazz = albums.JazzAlbum;
+        this.all = albums.AllAlbum;
     }
-
 
     public String playMusic(MusicOption musicOption) {
         Music music;
+
 
         switch (musicOption) {
             case ROCK -> music = rock;
